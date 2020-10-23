@@ -27,9 +27,10 @@ function nAryTreesAreEqual(root1, root2) {
     if ((root1 && !root2) || (!root1 && root2) || (root1.value != root2.value) || (root1.children.length != root2.children.length)) {
         return false;
     }
-    let childrenAreEqual = true;
     for (let i in root1.children) {
-        childrenAreEqual = childrenAreEqual && nAryTreesAreEqual(root1.children[i], root2.children[i]);
+        if (!nAryTreesAreEqual(root1.children[i], root2.children[i])) {
+            return false;
+        }
     }
-    return childrenAreEqual;
+    return true;
 }
