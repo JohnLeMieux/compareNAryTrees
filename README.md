@@ -1,2 +1,2 @@
-# compareNAryTrees
-a function to compare 2 n-ary trees
+- Define an n-ary tree node object that has (1) an integer value and (2) an array of children nodes [of variable size].
+- Use this node definition to write a function that compares if 2 n-nary trees are equal.
